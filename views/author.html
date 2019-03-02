@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Author</title>
+</head>
+<body>
+    {% extends 'base.html' %}
+    {% block title %}欢迎光临首页{% endblock %}
+    {% block content %}
+        <table id="dg" class="easyui-datagrid" title="作者列表"
+			data-options="pagination:true,pageList: [10,15,20,30],url:'/getAuthor/',method:'get',toolbar:'#tb',
+			rownumbers:true,fit:true,nowrap:true,loadMsg:'数据加载中....',
+           ">
+            <thead>
+                <tr>
+                    <th data-options="field:'id',align:'center'" width="5%">id</th>
+                    <th data-options="field:'name'" width="9%">姓名</th>
+                    <th data-options="field:'account'" width="10%">账号</th>
+                    <th data-options="field:'email'" width="15%">邮箱</th>
+                    <th data-options="field:'sex'" width="5%" formatter="formatSex">性别</th>
+                    <th data-options="field:'depart'" width="15%" formatter="formatDepart">部门</th>
+                    <th data-options="field:'phone'" width="10%">手机号</th>
+                    <th data-options="field:'publish_date'" width="15%">更新时间</th>
+                    <th data-options="field:'_operate',align:'center',formatter:formatOper" width="15%">操作</th>
+                </tr>
+            </thead>
+        </table>
+        {#  表格 筛选操作列  #}
+        <div id="tb" style="padding:5px;height:auto">
+            <div style="margin-bottom:5px">
+                <a href="#" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="dlgShow()"></a>
+                <a href="#" class="easyui-linkbutton" iconCls="icon-edit" plain="true"></a>
+                <a href="#" class="easyui-linkbutton" iconCls="icon-save" plain="true"></a>
+                <a href="#" class="easyui-linkbutton" iconCls="icon-cut" plain="true"></a>
+                <a href="#" class="easyui-linkbutton" iconCls="icon-remove" plain="true"></a>
+            </div>
+            <div>
+                <form id="searchForm" name="searchForm">
+                    姓名： <input class="easyui-combobox" name="author" id="author" style="width:100px"></input>
+                    sex:
+                    <select class="easyui-combobox" panelHeight="auto" name="sex" style="width:100px">
+                        <option value="-1">--</option>
+                        <option value="0">男</option>
+                        <option value="1">女</option>
+                    </select>
+                    部门:<input class="easyui-combobox" name="depart" style="width:100px" >
+                    Date From: <input class="easyui-datebox" name="dateFrom" style="width:80px">
+                    To: <input class="easyui-datebox" name="dateTo" style="width:80px">
+                    <a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-search'" id="searchBtn">Search</a>
+                </form>
+            </div>
+        </div>
+        {#  author 新增、修改 弹框  #}
+        <div id="dlg" class="easyui-dialog easyui-dialog-big" title="文章"
+             closed="true" modal="true"
+             data-options="
+                buttons: [{
+                        text:'Ok',
+                        iconCls:'icon-ok',
+                        handler:function(){
+                            if($('#modifyId').val()){   // 修改
+                              edit()
+                            }else {   // 新增
+                              add()
+                            }
+                        }
+                    },{
+                        text:'Cancel',
+                        name: 'Cancel'
+                    }]
+            "
+        >
+            <input type="hidden" value="{{ csrf_token }}" id="csrf_token">
+            <form id="form" action="" method="post" class="easyui-form" data-options="novalidate:true" enctype="multipart/form-data">
+                <input type="hidden" id="modifyId" name="modifyId">
+                <table cellpadding="5" style="width: 100%">
+                    <tr>
+                        <td colspan="2">
+                            <div class="img_box">
+                                <img src="{{ STATIC_URL }}img/default.png" alt="作者头像">
+                                <input type="file" id="headimg" name="headimg" onchange="imagePreview(this)" accept="image/*">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>姓名:</td>
+                        <td><input class="easyui-textbox" type="text" name="name" data-options="required:true" missingMessage="姓名不能为空"></input></td>
+                    </tr>
+                    <tr>
+                        <td>邮箱:</td>
+                        <td><input class="easyui-textbox" type="text" id="email" name="email" data-options="required:true" missingMessage="邮箱不能为空"></input></td>
+                    </tr>
+                    <tr>
+                        <td>性别:</td>
+                        <td>
+                            <select name="sex" class="easyui-combobox" panelHeight="auto" required="true"  style="width:166px;">
+                                <option value="0">男</option>
+                                <option value="1">女</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>部门:</td>
+                        <td>
+                            <input class="easyui-combobox" name="depart" required="true">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>手机号:</td>
+                        <td><input class="easyui-textbox" type="text" name="phone" data-options="required:true"></input></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><hr></td>
+                    </tr>
+                    <tr>
+                        <td>账号:</td>
+                        <td>
+                            <input class="easyui-textbox" name="account" id="account" data-options="readonly:true">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>密码默认为:</td>
+                        <td>
+                            <input class="easyui-textbox" id="defaultPsd" readonly>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="checkbox" checked>用户创建成功，自动发送邮件进行通知！</td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+
+    <script type="text/javascript" src="{{ STATIC_URL }}js/jquery-1.11.3/jquery.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/author.js"></script>
+
+    {% endblock %}
+</body>
+</html>

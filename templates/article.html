@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>{% block title %}文章列表{% endblock %}</title>
+</head>
+<body>
+    <h3>文章列表：</h3>
+    <table>
+		<tr>
+			<td>publish Date:</td>
+			<td><input class="easyui-datebox" data-options="sharedCalendar:'#cc'" id="publish_date"></td>
+			<td>update Date:</td>
+			<td><input class="easyui-datebox" data-options="sharedCalendar:'#cc'" id="update_time"></td>
+            <td>title:</td>
+            <td><input class="easyui-textbox" type="text" name="title" id="title"></input></td>
+            <td>content:</td>
+            <td><input class="easyui-textbox" type="text" name="content" id="content"></input></td>
+            <td><a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-search'" onclick="searchArticle()">Search</a></td>
+		</tr>
+        <tr>
+            <td colspan="9">
+                <a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-add'" onclick="articleDialog()">Add</a>
+                <a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-save'">Save</a>
+                <a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-cut',disabled:true">Cut</a>
+                <a href="#" class="easyui-linkbutton">Text Button</a>
+            </td>
+        </tr>
+	</table>
+	<div id="cc" class="easyui-calendar"></div>
+
+    <ul id="articleList">
+        {% for article in article_list %}
+            <li name="{{ article.id }}">
+                <h3>{{ forloop.counter }}、 {{ article.title }}
+                    <a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-remove'" onclick="showDialogDel({{ article.id }})">Remove</a>
+                    <a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-edit'" onclick="articleDialog({{ article.id }},'{{ article.title }}','{{ article.content }}')">Edit</a>
+                </h3>
+                <p>{{ article.publish_date }} - {{ article.update_time }}</p>
+                <p>文章内容：{{ article.content }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+
+	<div id="dlg" class="easyui-dialog easyui-dialog-big" title="文章" style="width:400px;height:300px;padding:10px"
+         closed="true" modal="true"
+         data-options="
+            buttons: [{
+					text:'Ok',
+					iconCls:'icon-ok',
+					handler:function(){
+					    console.log($('#articleId').val())
+						if($('#articleId').val()){   // 修改
+                          modifyArticle()
+						}else { // 新增
+                          addArticle()
+						}
+					}
+				},{
+					text:'Cancel',
+					handler:function(){}
+				}]
+        "
+    >
+        <form id="articleForm" action="" method="post" class="easyui-form" data-options="novalidate:true">
+            <input type="hidden" id="articleId" name="articleId">
+            <table cellpadding="5" style="width: 100%">
+	    		<tr>
+	    			<td>文章标题:</td>
+	    			<td><input class="easyui-textbox" id="addTitle" type="text" name="title" data-options="required:true"></input></td>
+	    		</tr>
+	    		<tr>
+	    			<td>文章内容:</td>
+	    			<td><input class="easyui-textbox" id="addContent" name="content" data-options="multiline:true,required:true" style="height:60px"></input></td>
+	    		</tr>
+            </table>
+        </form>
+	</div>
+
+    <script>
+        function articleDialog(id, title, content){
+            $('#dlg').dialog('open');
+            if(id){   // 弹出修改框
+                article = {
+                    articleId: id,
+                    title : title,
+                    content: content,
+                };
+                $('#dlg form').form('load', article);
+            }else {   // 弹出新增框
+                $('#articleId').val("");
+                $("#articleForm").form('clear');
+            }
+        }
+
+        function showDialogDel(id){
+            $.messager.confirm('文章删除', 'Are you confirm this?', function(r){
+				if (r){
+					$.ajax({
+                        type: 'post',
+                        url: '{% url "delArticle" %}',
+                        data: {
+                            'id': id,
+                        },
+                        success: function(ret){
+                            location.href = ""
+                        }
+                    });
+				}
+			});
+        }
+
+        function addArticle(){
+            if(!$('#articleForm').form('enableValidation').form('validate')) return;
+            $.ajax({
+                type: 'post',
+                url: '{% url "addArticle" %}',
+                data: {
+                    'title': $('#addTitle').val(),
+                    'content': $('#addContent').val()
+                },
+                success: function(ret){
+                    $('#dlg').dialog('close');
+                    location.href = ""
+                }
+            });
+        }
+
+        function modifyArticle(){
+            if(!$('#articleForm').form('enableValidation').form('validate')) return;
+            $.ajax({
+                type: 'post',
+                url: '{% url "modifyArticle" %}',
+                data: {
+                    'id': $('#articleId').val(),
+                    'title': $('#addTitle').val(),
+                    'content': $('#addContent').val()
+                },
+                success: function(ret){
+                    $('#dlg').dialog('close');
+                    location.href = ""
+                }
+            });
+        }
+
+        function searchArticle(){
+            var publish_date = $("#publish_date").datebox("getValue");
+            var update_time = $("#update_time").datebox("getValue");
+            if(publish_date) publish_date = moment(publish_date).format("YYYY-MM-DD HH:mm:ss");
+            if(update_time) update_time = moment(update_time).format("YYYY-MM-DD HH:mm:ss");
+            $.ajax({
+                type: 'post',
+                url: '{% url "searchArticle" %}',
+                data: {
+                    'publish_date': publish_date,
+                    'update_time': update_time,
+                    'title': $("#title").val(),
+                    'content': $("#content").val(),
+                },
+                success: function(data){
+                    if(data.ret.success){
+                        layer.msg(data.ret.retMsg);
+                        $("#articleList").empty();
+                        var html = '';
+                        if(data.list.length==0) return layer.msg("暂无数据");
+                        data.list.forEach(function(item,i){
+                            html += '<li name="'+item.fields.id+'">' +
+                            '                <h3>'+(i+1)+'、 '+item.fields.title +
+                            '                    <a href="#" class="easyui-linkbutton" data-options="iconCls:\'icon-remove\'" onclick="showDialogDel('+item.fields.id +')">Remove</a>\n' +
+                            '                    <a href="#" class="easyui-linkbutton" data-options="iconCls:\'icon-edit\'" onclick="articleDialog('+item.fields.id +',\''+item.fields.title+'\',\''+item.fields.content +'\')">Edit</a>\n' +
+                            '                </h3>\n' +
+                            '                <p>'+item.fields.publish_date+' - '+item.fields.update_time+'</p>' +
+                            '                <p>文章内容：'+item.fields.content+'</p>' +
+                            '            </li>';
+                        });
+                        $("#articleList").append(html);
+                    }else {
+                        layer.msg("查询文章失败")
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+</html>

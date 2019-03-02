@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% extends 'base.html' %}
+
+    {% block title %}欢迎光临首页{% endblock %}
+
+    {% block content %}
+        {% include 'ad.html' %}
+        {% include 'form.html' %}
+        {% include 'ajax.html' %}
+        {% include 'hello.html' %}
+        <p>------------home 主体页面内容编辑-----------------</p>
+        <h1>项目主页，欢迎您的到来: {{ request.user }} </h1>
+        <p>
+            {% if request.user.is_authenticated %}
+                {{ request.user.username }}，您好！
+            {% else %}
+                请登陆，这里放登陆链接
+            {% endif %}
+        </p>
+        <p> 当前网页地址：{{ request.path }}，网址参数是：{{ request.GET.urlencode }} </p>
+        <a href="{{ request.path }}?{{ request.GET.urlencode }}&delete=1">当前网址加参数 delete</a>
+        <a href="/add/4/5">计算4+5的总和</a>
+        <a href="{% url 'add2' 4 5 %}">link带参传递</a>
+        <p>{{ string }}</p>
+        <ul>
+            {% for i in TutorialList %}
+             <li >{{ i }}</li>
+            {% endfor %}
+        </ul>
+        <p>diac 字典拼串：站点：{{ info_dict.site }} - 内容：{{ info_dict.content }}</p>
+        <p>字典第二种方法：
+            {% for key, value in info_dict.items %}
+                {{ key }}: {{ value }}
+            {% endfor %}
+        </p>
+        <p>字数限制：
+            {% for item in List %}
+                {{ item }}，    <!--这句话可以去除最后一项之后的逗号： {% if not forloop.last %},{% endif %}  -->
+            {% endfor %}
+        </p>
+        <p>
+            {% for item in List %}
+                {{ item }}
+            {% endfor %}
+        </p>
+        <h4>判断字符串在不在列表中：
+            {% if 'ziqiangxuetang' in List %}
+                自强学堂在名单中
+            {% else %}
+                自强学堂不在名单中
+            {% endif %}
+
+        </h4>
+        <ol>
+            {% for athlete in athlete_list %}
+                <li>{{ athlete.name }}</li>
+            {% empty %}
+                <li>抱歉，列表为空</li>
+            {% endfor %}
+        </ol>
+        <h3>分数-分数线： {{ score }}</h3>
+        <ol>
+            {% if score >= 90 %}
+                成绩优秀，自强学堂你没少去吧！学得不错
+            {% elif score >= 80 %}
+                成绩良好
+            {% elif score >= 70 %}
+                成绩一般
+            {% elif score >= 60 %}
+                需要努力
+            {% else %}
+                不及格啊，大哥！多去自强学堂学习啊！
+            {% endif %}
+        </ol>
+        <p>
+
+        </p>
+        <p>------------home 主体页面内容编辑------------------</p>
+
+    {% endblock %}
+
+</body>
+</html>

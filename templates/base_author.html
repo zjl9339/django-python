@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}用户列表{% endblock %}</title>
+    <link rel ="stylesheet" href ="{{STATIC_URL}}js/lib/jquery-easyui-1.4.2/themes/default/easyui.css">
+    <link rel ="stylesheet" href ="{{STATIC_URL}}js/lib/jquery-easyui-1.4.2/themes/icon.css">
+    <link rel ="stylesheet" href ="{{STATIC_URL}}js/lib/layer/skin/layer.css">
+    <link rel ="stylesheet" href ="{{STATIC_URL}}css/style.css">
+</head>
+<body>
+    <table id="dg" class="easyui-datagrid" title="作者列表" style="width:100%;height:370px"
+			data-options="singleSelect:true,collapsible:true,pagination:true,url:'/getAuthor/',method:'get'">
+		<thead>
+			<tr>
+				<th data-options="field:'id',align:'center'" width="10%">id</th>
+				<th data-options="field:'name'" width="15%">姓名</th>
+				<th data-options="field:'email',align:'center'" width="15%">邮箱</th>
+				<th data-options="field:'sex'" width="10%">性别</th>
+				<th data-options="field:'department'" width="15%">部门</th>
+				<th data-options="field:'pthone',align:'center'" width="15%">手机号</th>
+				<th data-options="field:'_operate',align:'center',formatter:formatOper" width="20%">操作</th>
+			</tr>
+		</thead>
+	</table>
+
+    <div id="dlg" class="easyui-dialog" title="文章" style="width:400px;height:300px;padding:10px"
+         closed="true" modal="true"
+         data-options="
+            buttons: [{
+					text:'Ok',
+					iconCls:'icon-ok',
+					handler:function(){
+						if($('#articleId').val()){   // 修改
+                          edit()
+						}else { // 新增
+                          add()
+						}
+					}
+				},{
+					text:'Cancel',
+					handler:function(){}
+				}]
+        "
+    >
+        <form id="form" action="" method="post" class="easyui-form" data-options="novalidate:true">
+            <input type="hidden" id="articleId" name="articleId">
+            <table cellpadding="5" style="width: 100%">
+	    		<tr>
+	    			<td>姓名:</td>
+	    			<td><input class="easyui-textbox" id="addTitle" type="text" name="name" data-options="required:true"></input></td>
+	    		</tr>
+                <tr>
+	    			<td>邮箱:</td>
+	    			<td><input class="easyui-textbox" id="addTitle" type="text" name="email" data-options="required:true"></input></td>
+	    		</tr>
+	    		<tr>
+	    			<td>性别:</td>
+	    			<td><input class="easyui-textbox" id="addContent" name="sex" data-options="multiline:true,required:true" style="height:60px"></input></td>
+	    		</tr>
+                <tr>
+	    			<td>部门:</td>
+	    			<td><input class="easyui-textbox" id="addTitle" type="text" name="department" data-options="required:true"></input></td>
+	    		</tr>
+                <tr>
+	    			<td>手机号:</td>
+	    			<td><input class="easyui-textbox" id="addTitle" type="text" name="pthone" data-options="required:true"></input></td>
+	    		</tr>
+            </table>
+        </form>
+	</div>
+
+    <script type="text/javascript" src="{{ STATIC_URL }}js/jquery-1.11.3/jquery.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/author.js"></script>
+</body>
+</html>
