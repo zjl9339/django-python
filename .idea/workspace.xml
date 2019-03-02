@@ -1,0 +1,759 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/proApp/book.py" line="248" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ec009744-066e-4b1b-8e59-a18278a9ce00" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-466711940">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="46" />
+          <entry key="project.open.time.105" value="1" />
+          <entry key="project.open.time.106" value="2" />
+          <entry key="project.open.time.107" value="1" />
+          <entry key="project.open.time.109" value="1" />
+          <entry key="project.open.time.11" value="1" />
+          <entry key="project.open.time.111" value="1" />
+          <entry key="project.open.time.130" value="1" />
+          <entry key="project.open.time.140" value="1" />
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.201" value="1" />
+          <entry key="project.open.time.31" value="1" />
+          <entry key="project.open.time.32" value="2" />
+          <entry key="project.open.time.35" value="1" />
+          <entry key="project.open.time.37" value="1" />
+          <entry key="project.open.time.38" value="1" />
+          <entry key="project.open.time.39" value="4" />
+          <entry key="project.open.time.40" value="2" />
+          <entry key="project.open.time.42" value="2" />
+          <entry key="project.open.time.43" value="2" />
+          <entry key="project.open.time.44" value="2" />
+          <entry key="project.open.time.45" value="1" />
+          <entry key="project.open.time.46" value="1" />
+          <entry key="project.open.time.47" value="2" />
+          <entry key="project.open.time.49" value="1" />
+          <entry key="project.open.time.50" value="3" />
+          <entry key="project.open.time.51" value="1" />
+          <entry key="project.open.time.52" value="1" />
+          <entry key="project.open.time.58" value="1" />
+          <entry key="project.open.time.63" value="1" />
+          <entry key="project.open.time.67" value="1" />
+          <entry key="project.open.time.69" value="1" />
+          <entry key="project.open.time.73" value="1" />
+          <entry key="project.open.time.74" value="1" />
+          <entry key="project.open.time.75" value="1" />
+          <entry key="project.open.time.78" value="2" />
+          <entry key="project.opened" value="48" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="css" value="27" />
+          <entry key="html" value="150" />
+          <entry key="jpeg" value="8" />
+          <entry key="jpg" value="13" />
+          <entry key="js" value="99" />
+          <entry key="log" value="45" />
+          <entry key="png" value="2" />
+          <entry key="py" value="382" />
+          <entry key="svg" value="6" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="CSS" value="27" />
+          <entry key="HTML" value="150" />
+          <entry key="Image" value="23" />
+          <entry key="JavaScript" value="99" />
+          <entry key="PLAIN_TEXT" value="45" />
+          <entry key="Python" value="382" />
+          <entry key="SVG" value="6" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="css" value="1304" />
+          <entry key="html" value="7731" />
+          <entry key="js" value="7483" />
+          <entry key="py" value="18902" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="CSS" value="1304" />
+          <entry key="HTML" value="7731" />
+          <entry key="JavaScript" value="7483" />
+          <entry key="Python" value="18902" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.js.language.service.starts" />
+      <usages-collector id="statistics.vcs.git.usages" />
+    </session>
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="djangoPro" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/proApp/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1140">
+              <caret line="60" column="15" selection-start-line="60" selection-start-column="4" selection-end-line="60" selection-end-column="15" />
+              <folding>
+                <marker date="1548060826022" expanded="true" signature="1339:4185" ph="..." />
+                <marker date="1548060826022" expanded="true" signature="3079:4185" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/djangoPro/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="144" column="27" lean-forward="true" selection-start-line="144" selection-start-column="27" selection-end-line="144" selection-end-column="27" />
+              <folding>
+                <element signature="e#633#665#0" expanded="true" />
+                <marker date="1548137477815" expanded="true" signature="5523:5524" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/proApp/task.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="266">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
+              <folding>
+                <marker date="1548136367031" expanded="true" signature="151:196" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>id=&quot;form&quot;</find>
+      <find>name=&quot;bookCover&quot;</find>
+      <find>get_rabdom_str</find>
+      <find>DateEncoder</find>
+      <find>Datagrid</find>
+      <find>STATIC_URL</find>
+      <find>serializer</find>
+      <find>split</find>
+      <find>email</find>
+      <find>STATICFILES_DIRS</find>
+      <find>addAuthor</find>
+      <find>uploadHeadimg</find>
+      <find>table</find>
+      <find>common</find>
+      <find>maxId</find>
+      <find>name=&quot;email&quot;</find>
+      <find>tableName</find>
+      <find>HttpResponse</find>
+      <find>sys</find>
+      <find>INSTALLED_APPS</find>
+      <find>Header</find>
+      <find>logging</find>
+      <find>CRONJOBS</find>
+      <find>request</find>
+      <find>utils</find>
+      <find>sendEmail</find>
+      <find>time</find>
+      <find>BACKEND</find>
+      <find>USE_I18N</find>
+      <find>datetime</find>
+    </findStrings>
+    <dirStrings>
+      <dir>C:\xampp\cgi-bin\djangoPro\proApp</dir>
+    </dirStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/templates/author.html" />
+        <option value="$PROJECT_DIR$/views/home.html" />
+        <option value="$PROJECT_DIR$/templates/base_author.html" />
+        <option value="$PROJECT_DIR$/proApp/static/tree.py" />
+        <option value="$PROJECT_DIR$/proApp/static/js/blog.js" />
+        <option value="$PROJECT_DIR$/proApp/blog.py" />
+        <option value="$PROJECT_DIR$/views/blog.html" />
+        <option value="$PROJECT_DIR$/proApp/static/js/lib/jquery-easyui-1.4.2/jquery.easyui.min.js" />
+        <option value="$PROJECT_DIR$/proApp/static/js/conmon.js" />
+        <option value="$PROJECT_DIR$/proApp/forms.py" />
+        <option value="$PROJECT_DIR$/templates/article.html" />
+        <option value="$PROJECT_DIR$/proApp/article.py" />
+        <option value="$PROJECT_DIR$/proApp/depart.py" />
+        <option value="$PROJECT_DIR$/proApp/login.py" />
+        <option value="$PROJECT_DIR$/proApp/base.py" />
+        <option value="$PROJECT_DIR$/proApp/static/js/login.js" />
+        <option value="$PROJECT_DIR$/proApp/tree.py" />
+        <option value="$PROJECT_DIR$/views/publisher.html" />
+        <option value="$PROJECT_DIR$/proApp/publisher.py" />
+        <option value="$PROJECT_DIR$/proApp/static/js/publisher.js" />
+        <option value="$PROJECT_DIR$/proApp/static/js/depart.js" />
+        <option value="$PROJECT_DIR$/views/depart.html" />
+        <option value="$PROJECT_DIR$/proApp/static/js/dict.js" />
+        <option value="$PROJECT_DIR$/proApp/static/js/lib/jquery-easyui-1.4.2/themes/icon.css" />
+        <option value="$PROJECT_DIR$/manage.py" />
+        <option value="$PROJECT_DIR$/proApp/static/js/base.js" />
+        <option value="$PROJECT_DIR$/proApp/log.py" />
+        <option value="$PROJECT_DIR$/proApp/static/css/common.css" />
+        <option value="$PROJECT_DIR$/proApp/custom_model_admin.py" />
+        <option value="$PROJECT_DIR$/views/login.html" />
+        <option value="$PROJECT_DIR$/proApp/book.py" />
+        <option value="$PROJECT_DIR$/proApp/static/css/style.css" />
+        <option value="$PROJECT_DIR$/proApp/static/js/book.js" />
+        <option value="$PROJECT_DIR$/proApp/utils.py" />
+        <option value="$PROJECT_DIR$/views/book.html" />
+        <option value="$PROJECT_DIR$/proApp/admin.py" />
+        <option value="$PROJECT_DIR$/proApp/static/js/common.js" />
+        <option value="$PROJECT_DIR$/proApp/static/js/author.js" />
+        <option value="$PROJECT_DIR$/views/author.html" />
+        <option value="$PROJECT_DIR$/proApp/views.py" />
+        <option value="$PROJECT_DIR$/proApp/author.py" />
+        <option value="$PROJECT_DIR$/proApp/common.py" />
+        <option value="$PROJECT_DIR$/proApp/smallTools.py" />
+        <option value="$PROJECT_DIR$/proApp/crontab.py" />
+        <option value="$PROJECT_DIR$/proApp/management/commands/test.py" />
+        <option value="$PROJECT_DIR$/djangoPro/settings.py" />
+        <option value="$PROJECT_DIR$/proApp/tests.py" />
+        <option value="$PROJECT_DIR$/proApp/models.py" />
+        <option value="$PROJECT_DIR$/templates/base.html" />
+        <option value="$PROJECT_DIR$/proApp/task.py" />
+        <option value="$PROJECT_DIR$/djangoPro/urls.py" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-12" />
+    <option name="y" value="-12" />
+    <option name="width" value="1944" />
+    <option name="height" value="1044" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="djangoPro" type="b2602c69:ProjectViewProjectNode" />
+              <item name="djangoPro" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="djangoPro" type="b2602c69:ProjectViewProjectNode" />
+              <item name="djangoPro" type="462c0819:PsiDirectoryNode" />
+              <item name="djangoPro" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="djangoPro" type="b2602c69:ProjectViewProjectNode" />
+              <item name="djangoPro" type="462c0819:PsiDirectoryNode" />
+              <item name="proApp" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SearchEverywhereHistoryKey" value=" &#9;FILE&#9;file://C:/xampp/cgi-bin/djangoPro/proApp/views.py" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/exam_20150313194644_528" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\cgi-bin\djangoPro\proApp\static\img" />
+      <recent name="C:\xampp\cgi-bin\djangoPro\views" />
+      <recent name="C:\xampp\cgi-bin\djangoPro\media\icons" />
+      <recent name="C:\xampp\cgi-bin\djangoPro\proApp" />
+      <recent name="C:\xampp\cgi-bin\djangoPro\proApp\static\css" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\cgi-bin\djangoPro" />
+      <recent name="C:\xampp\cgi-bin\djangoPro\proApp" />
+      <recent name="C:\xampp\cgi-bin\djangoPro\media\icons\18" />
+      <recent name="C:\xampp\cgi-bin\djangoPro\proApp\static\img" />
+      <recent name="C:\xampp\cgi-bin\djangoPro\media\uploads\icons" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="djangoPro" type="Python.DjangoServer" factoryName="Django server">
+      <module name="djangoPro" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="djangoPro.settings" />
+      </envs>
+      <option name="SDK_HOME" value="D:\anzhuang\python\python.exe" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8100" />
+      <option name="host" value="127.0.0.1" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="StructureViewFactory">
+    <option name="AUTOSCROLL_MODE" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ec009744-066e-4b1b-8e59-a18278a9ce00" name="Default Changelist" comment="" />
+      <created>1542243002186</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1542243002186</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TodoView" selected-index="1">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1296" height="696" extended-state="0" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49584487" visible="true" weight="0.22294022" />
+      <window_info id="Structure" order="1" sideWeight="0.5041551" side_tool="true" weight="0.20678514" />
+      <window_info id="Favorites" order="2" sideWeight="0.50119907" side_tool="true" weight="0.23424879" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32920355" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49757674" weight="0.48318583" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4983845" weight="0.5168142" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32920355" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5024233" side_tool="true" weight="0.48318583" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.31681415" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.32920355" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" weight="0.32956383" />
+      <window_info anchor="right" id="SciView" order="4" weight="0.32956383" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.log" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/proApp/static/js/author.js</url>
+          <line>57</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/proApp/author.py</url>
+          <line>109</line>
+          <option name="timeStamp" value="46" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/proApp/common.py</url>
+          <line>66</line>
+          <option name="timeStamp" value="54" />
+        </line-breakpoint>
+      </breakpoints>
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/media/img/default.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proApp/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="4" column="16" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/media/uploads/icons/d6f42510228d37db2a433b4b72236577.jpg" />
+    <entry file="file://$PROJECT_DIR$/media/uploads/icons/397d9ef7820c867abd9c47c7f10bb46a.jpg" />
+    <entry file="file://$PROJECT_DIR$/media/uploads/icons/d66e49a8f74630925320ff0a6925f66a.jpg" />
+    <entry file="file://$PROJECT_DIR$/proApp/static/js/book.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="117">
+          <caret line="48" column="35" lean-forward="true" selection-start-line="48" selection-start-column="35" selection-end-line="48" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proApp/static/js/dict.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-448">
+          <caret line="81" column="9" selection-start-line="81" selection-start-column="9" selection-end-line="81" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/anzhuang/python/Lib/pprint.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="573">
+          <caret line="402" column="64" selection-start-line="402" selection-start-column="64" selection-end-line="402" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/anzhuang/python/Lib/site-packages/django/db/models/query.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106">
+          <caret line="246" selection-start-line="246" selection-end-line="246" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/anzhuang/python/Lib/site-packages/django/db/models/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="77">
+          <caret line="502" selection-start-line="502" selection-end-line="502" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/media/icons/6222bfe124cb0b9fe294ee7589060632.jpg" />
+    <entry file="file://$PROJECT_DIR$/media/icons/22.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/media/icons/17.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/media/icons/18.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/media/img/2_bookCover/1547602414.996394.jpeg" />
+    <entry file="file://$PROJECT_DIR$/media/img/2_bookCover/1547602806.6992123.jpeg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proApp/static/js/base.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-399" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/media/icons/1547616057.jpg" />
+    <entry file="file://$PROJECT_DIR$/proApp/static/js/common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="108" column="1" selection-start-line="88" selection-end-line="108" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/author.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2451">
+          <caret line="129" column="76" selection-start-line="129" selection-start-column="66" selection-end-line="129" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proApp/static/js/author.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proApp/book.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="430" column="27" selection-start-line="430" selection-start-column="18" selection-end-line="430" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proApp/add2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="4" column="36" lean-forward="true" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proApp/login.html" />
+    <entry file="file://D:/anzhuang/python/Lib/site-packages/django/utils/deprecation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="93" selection-start-line="93" selection-end-line="93" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/anzhuang/python/Lib/site-packages/django/core/handlers/exception.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="118">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/anzhuang/python/Lib/site-packages/django/core/handlers/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="157" selection-start-line="157" selection-end-line="157" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manage.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://D:/anzhuang/python/Lib/site-packages/django/core/management/commands/runserver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="71">
+          <caret line="116" selection-start-line="116" selection-end-line="116" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/anzhuang/python/Lib/site-packages/django/utils/autoreload.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="71">
+          <caret line="224" selection-start-line="224" selection-end-line="224" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/anzhuang/python/Lib/site-packages/django/core/management/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="365" selection-start-line="365" selection-end-line="365" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/anzhuang/python/Lib/site-packages/django/urls/resolvers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="71">
+          <caret line="532" selection-start-line="532" selection-end-line="532" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/anzhuang/python/Lib/importlib/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="71">
+          <caret line="125" selection-start-line="125" selection-end-line="125" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proApp/login.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-120">
+          <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proApp/common.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="21" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="21" />
+          <folding>
+            <element signature="e#530#891#0" />
+            <element signature="e#1236#2124#0" />
+            <marker date="1547712889252" expanded="true" signature="7984:7985" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proApp/smallTools.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="10" lean-forward="true" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/book.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1596">
+          <caret line="84" column="77" selection-start-line="84" selection-start-column="46" selection-end-line="84" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proApp/crontab.py" />
+    <entry file="file://D:/anzhuang/python/Lib/site-packages/django_crontab/management/commands/crontab.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proApp/management/commands/test.py" />
+    <entry file="file://$PROJECT_DIR$/logs/cronjobs.log">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proApp/author.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2964">
+          <caret line="163" column="56" selection-start-line="163" selection-start-column="36" selection-end-line="163" selection-end-column="56" />
+          <folding>
+            <element signature="e#24#59#0" expanded="true" />
+            <element signature="e#3321#3471#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proApp/tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="12" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proApp/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="5" column="11" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proApp/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="32" column="91" selection-start-line="32" selection-start-column="83" selection-end-line="32" selection-end-column="91" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="23" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proApp/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="7" column="40" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/djangoPro/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="127" column="8" selection-start-line="127" selection-end-line="127" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proApp/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1140">
+          <caret line="60" column="15" selection-start-line="60" selection-start-column="4" selection-end-line="60" selection-end-column="15" />
+          <folding>
+            <marker date="1548060826022" expanded="true" signature="1339:4185" ph="..." />
+            <marker date="1548060826022" expanded="true" signature="3079:4185" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proApp/task.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <marker date="1548136367031" expanded="true" signature="151:196" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/djangoPro/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="144" column="27" lean-forward="true" selection-start-line="144" selection-start-column="27" selection-end-line="144" selection-end-column="27" />
+          <folding>
+            <element signature="e#633#665#0" expanded="true" />
+            <marker date="1548137477815" expanded="true" signature="5523:5524" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

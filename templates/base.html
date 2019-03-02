@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+{% load staticfiles  %}
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>{% block title %}默认标题{% endblock %}</title>
+    <link rel ="stylesheet" href ="{{STATIC_URL}}js/lib/jquery-easyui-1.4.2/themes/default/easyui.css">
+    <link rel ="stylesheet" href ="{{STATIC_URL}}js/lib/jquery-easyui-1.4.2/themes/icon.css">
+    <link rel ="stylesheet" href ="{{STATIC_URL}}js/lib/layer/skin/layer.css">
+    <link rel ="stylesheet" href ="{{STATIC_URL}}css/common.css">
+    <link rel ="stylesheet" href ="{{STATIC_URL}}css/style.css">
+    <link rel="shortcut icon" href="{%static "img/favicon.ico" %}" />
+</head>
+<body class="easyui-layout">
+    <div data-options="region:'north',border:false" style="height:60px;background:#B3DFDA;padding:10px">
+        <h2 class="head_title">python djago easyui</h2>
+        {#  head区：导航链接按钮  #}
+        <div class="menu_box">
+            <a href="/home" class="easyui-linkbutton" data-options="plain:true">Home</a>
+            <a href="#" class="easyui-menubutton" data-options="menu:'#mm1',iconCls:'icon-edit'">Edit</a>
+            <a href="#" class="easyui-menubutton" data-options="menu:'#mm2',iconCls:'icon-help'">Help</a>
+            <a href="#" class="easyui-menubutton" data-options="menu:'#mm3'">About</a>
+        </div>
+        <div id="mm1" class="sub_box">
+            <div data-options="iconCls:'icon-undo'">Undo</div>
+            <div data-options="iconCls:'icon-redo'">Redo</div>
+            <div class="menu-sep"></div>
+            <div>Cut</div>
+            <div>Copy</div>
+            <div>Paste</div>
+            <div class="menu-sep"></div>
+            <div>
+                <span>Toolbar</span>
+                <div>
+                    <div>Address</div>
+                    <div>Link</div>
+                    <div>Navigation Toolbar</div>
+                    <div>Bookmark Toolbar</div>
+                    <div class="menu-sep"></div>
+                    <div>New Toolbar...</div>
+                </div>
+            </div>
+            <div data-options="iconCls:'icon-remove'">Delete</div>
+            <div>Select All</div>
+        </div>
+        <div id="mm2" class="sub_box">
+            <div>Help</div>
+            <div>Update</div>
+            <div>About</div>
+        </div>
+        <div id="mm3" class="menu-content" style="background:#f0f0f0;padding:10px;text-align:left">
+            <img src="http://www.jeasyui.com/images/logo1.png" style="width:150px;height:50px">
+            <p style="font-size:14px;color:#444;">Try jQuery EasyUI to build your modern, interactive, javascript applications.</p>
+        </div>
+
+        {# 用户账号 #}
+        <a href="#" class="easyui-menubutton username_box" data-options="menu:'#username'"></a>
+        <div id="username" class="sub_box">
+            <div data-options="iconCls:'icon-undo'" onclick="javascript:$('#modifyPsd').dialog('open');return;">修改密码</div>
+            <div data-options="iconCls:'icon-redo'">使用帮助</div>
+            <div class="menu-sep"></div>
+            <div onclick="loginOut()">退出</div>
+        </div>
+
+    </div>
+	<div data-options="region:'west',split:true,title:'West'" style="width:150px;padding:10px;">
+        <ul class="easyui-tree" id="tree"></ul>
+    </div>
+	<div data-options="region:'east',split:true,collapsed:true,title:'East'" style="width:100px;padding:10px;">
+
+    </div>
+	<div data-options="region:'south',border:false" style="height:50px;background:#A9FACD;padding:10px;">south region</div>
+	<div data-options="region:'center',title:'Center'" style="padding:10px;">
+        {% block content %}
+            <div>这里是默认内容，所有继承自这个模板的，如果不覆盖就显示这里的默认内容。</div>
+        {% endblock %}
+    </div>
+
+
+    {#  密码修改 弹框  #}
+    <div id="modifyPsd" class="easyui-dialog easyui-dialog-small" title="修改密码"
+         closed="true" modal="true"
+         data-options="
+            buttons: [{
+                    text:'Ok',
+                    iconCls:'icon-ok',
+                    handler:function(){
+                        modifyPsd()
+                    }
+                },{
+                    text:'Cancel',
+                    name: 'Cancel'
+                }]
+        "
+    >
+        <form id="psdform">
+            <table>
+                <tr>
+                    <td>新密码:</td>
+                    <td><input id="password" type="password" class="easyui-textbox" name="password" data-options="validType:'pwdLength[6,12]',required:true" missingMessage="密码不能为空"></input></td>
+                </tr>
+                <tr>
+                    <td>确认密码:</td>
+                    <td><input id="password2" type="password" class="easyui-textbox" name="password2" data-options="required:true" missingMessage="请确认密码" validType="equalTo['#password']" invalidMessage="两次输入密码不匹配"></input></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+    <script src ="{{STATIC_URL}}js/jquery-1.11.3/jquery.js"></script>
+    <script src ="{{STATIC_URL}}js/lib/jquery-easyui-1.4.2/jquery.easyui.min.js"></script>
+    <script src ="{{STATIC_URL}}js/lib/layer/layer.js"></script>
+    <script src ="{{STATIC_URL}}js/lib/sha256.js"></script>
+    <script src ="{{STATIC_URL}}js/lib/ajaxfileupload.js"></script>
+    <script src ="{{STATIC_URL}}js/lib/moment.js"></script>
+    <script src ="{{STATIC_URL}}js/dict.js"></script>
+    <script src ="{{STATIC_URL}}js/common.js"></script>
+    <script>
+        $(function () {
+            $.ajaxSetup({
+                data: {csrfmiddlewaretoken: '{{ csrf_token }}' },
+            });
+        })
+    </script>
+    <script src ="{{STATIC_URL}}js/common.js"></script>
+    <script src ="{{STATIC_URL}}js/base.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <p>请输入两个数字：</p>
+    <form action="/{% url 'add' %}/" method="get">
+        a: <input type="text" id="a" name="a"> <br>
+        b: <input type="text" id="b" name="b"> <br>
+        <p>result: <span id='result'></span></p>
+        <button type="button" id='sum'>提交</button>
+    </form>
+    <br>
+    <p>post 请求测试 - 请选择两个药名：</p>
+        <form>
+            {% for drug in TutorialList %}
+                <input type="checkbox" name="drug" value="{{ forloop.counter }}">{{ drug }}<br>
+            {% endfor %}
+            <br><input type="button" onclick="select_drug()" value="Submit"><br>
+        </form>
+        <div>post请求后数据是：<i id="result">12</i></div>
+    <br>
+
+<script src="http://apps.bdimg.com/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $("#sum").click(function(){
+            var a = $("#a").val();
+            var b = $("#b").val();
+
+            $.get("/add/",{'a':a,'b':b}, function(ret){
+                $('#result').html(ret)
+            })
+        });
+
+    });
+
+    function select_drug() {
+        var drug= document.forms[1].drug;
+        var drugs="";
+        var i;
+        for (i=0;i<drug.length;i++) {
+            if (drug[i].checked) {
+                drugs = drugs + drug[i].value + " ";
+            }
+        }
+        $.ajax({
+            type: "post",
+             url: "{% url 'select_drug' %}",
+             data: {'drugs': drugs},
+             {#dataType: "json",#}
+             success: function(ret){
+                    $('#result').html(ret);
+                    console.log(ret)
+             }
+        });
+    }
+</script>
+</body>
+</html>

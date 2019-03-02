@@ -1,0 +1,45 @@
+/** {*/
+
+/*}*/
+.pull_right {
+    float: right;
+}
+.easyui-dialog {
+    display: table;
+    padding:10px;
+}
+.menu_box a {
+   margin: 0 5px;
+}
+.sub_box {
+    width: 150px;
+}
+.easyui-dialog-small td {
+    min-width: 60px;
+}
+
+form[name="searchForm"] input{
+    width: 100px;
+}
+
+
+table .easyui-linkbutton {
+    display: inline-block;
+    text-decoration: none;
+    padding: 0 5px;
+    border: 1px solid #888;
+    border-radius: 4px;
+    margin-right: 5px;
+    color: #333;
+}
+table .easyui-linkbutton:hover {
+    cursor: pointer;
+    color: #0000ff;
+    border: 1px solid #0000ff;
+}
+.easyui-dialog table td {
+    min-width: 80px;
+}
+.easyui-dialog table input {
+
+}

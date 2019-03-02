@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+{% load staticfiles  %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录页</title>
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}js/lib/jquery-easyui-1.4.2/themes/default/easyui.css">
+	<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}js/lib/jquery-easyui-1.4.2/themes/icon.css">
+	<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/style.css">
+    <script src ="{{STATIC_URL}}js/jquery-1.11.3/jquery.js"></script>
+	<script type="text/javascript" src="{{ STATIC_URL }}js/lib/jquery-easyui-1.4.2/jquery.easyui.min.js"></script>
+	<script type="text/javascript" src="{{ STATIC_URL }}js/lib/layer/layer.js"></script>
+    <script src ="{{STATIC_URL}}js/lib/sha256.js"></script>
+    <script src ="{{STATIC_URL}}js/lib/jquery.cookie.js"></script>
+    <script src ="{{STATIC_URL}}js/common.js"></script>
+    <script src ="{{STATIC_URL}}js/login.js"></script>
+    <script>
+        $(function () {
+            $.ajaxSetup({
+                data: {csrfmiddlewaretoken: '{{ csrf_token }}' },
+            });
+        })
+    </script>
+</head>
+<body>
+    <div class="login_box">
+        <div class="easyui-panel" title="Login to system" style="width:400px;padding:30px 70px 20px 70px;">
+            <form action="" id="form">
+                <div>
+                    <input class="easyui-textbox" style="width:100%;height:40px;padding:12px;" name="name" value="zhaijl" data-options="required:true, prompt:'Username',iconCls:'icon-man',iconWidth:38,iconAlign:'left'">
+                </div>
+                <div>
+                    <input class="easyui-textbox" style="width:100%;height:40px;padding:12px;" type="password" value="zhaijuanli" name="password" data-options="required:true, prompt:'Password',iconCls:'icon-lock',iconWidth:38,iconAlign:'left'">
+                </div>
+                <div>
+                    <input class="easyui-textbox" style="width:100%;height:40px;padding:12px;" name="code" data-options="required:true, prompt:'code',iconCls:'icon-code',iconWidth:38,iconAlign:'left'">
+                    <img src="{% url "getCaptcha" %}" class="identifyCode" onclick="changeCaptcha()" />
+                </div>
+            </form>
+            <div>
+                <input type="checkbox" checked="checked">
+                <span>Remember me</span>
+            </div>
+            <div>
+                <a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-ok'" style="padding:5px 0;width:100%;" onclick="login()">
+                    <span style="font-size:14px;">Login</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
