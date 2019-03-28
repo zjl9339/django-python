@@ -163,12 +163,12 @@ MANAGERS = ADMINS
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.qq.com'                           # QQ邮箱SMTP服务器(邮箱需要开通SMTP服务)
 EMAIL_PORT = 25                                        # QQ邮箱SMTP服务端口
-EMAIL_HOST_USER = '2495061000@qq.com'                  # 我的邮箱帐号
-EMAIL_HOST_PASSWORD = 'medxhyzcxodcdjhc'                # 授权码 - 密码  xamniqaasycsdjag / medxhyzcxodcdjhc
+EMAIL_HOST_USER = 'xxxxxx@qq.com'                  # 我的邮箱帐号
+EMAIL_HOST_PASSWORD = 'xxxxxxx'                # 授权码 - 密码  xamniqaasycsdjag / medxhyzcxodcdjhc
 EMAIL_SUBJECT_PREFIX = 'django website'              # 为邮件标题的前缀,默认是'[django]'
 EMAIL_USE_TLS = True                                    # 开启安全链接
 # DEFAULT_FROM_EMAIL = SERVER_EMAIL = EMAIL_HOST_USER     # 设置发件人
-EMAIL_FROM = '2495061000@qq.com'                      # 你的 QQ 账号
+EMAIL_FROM = 'xxxxxx@qq.com'                      # 你的 QQ 账号
 
 
 #  log  首先创建日志存储路径.
